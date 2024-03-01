@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+
+        // links
+        let getStarted=React.createElement("a",{href:"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"},"Getting started with the web");
+
+        let html =React.createElement("a",{href:"https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"},"HTML- Structuring the web");
+
+        let css=React.createElement("a",{href:""},"CSS - Styling the web")
+
+
+        let container=React.createElement("div",null,
+
+         React.createElement("h1",{},"Topics covered"),
+
+         React.createElement("p",{},"The following is a list of all the topics we cover in the MDN learning area."),
+
+         React.createElement("dl",{},
+         [
+            React.createElement("dt",{},getStarted),
+            React.createElement("dd",{},"Provides a practical introduction to web development for complete beginners."),
+            React.createElement("dt",{},html),
+            React.createElement("dd",{},"HTML is the language that we use to structure the different parts of out content and define what their meaning or purpos is .This topic teaches HTML in detail."),
+            React.createElement("dt",{},css),
+            React.createElement("dd",{},"CSS is the language that we use to control our web content's style and layout , as well as adding behavior like animation.This topic provides comprehensive converge of CSS. ")
+        ]
+        )
+        );
+
+        ReactDOM.render(container,document.getElementById("root"));
+
+    </script>
+</body>
+</html>
